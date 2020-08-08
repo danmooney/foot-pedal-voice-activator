@@ -1,0 +1,44 @@
+{
+    "manifest_version": 2,
+    "name": "Foot Pedal Voice Activator",
+    "version": "0.1",
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://*/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "description": "Extension that reads hotkey input and listens and responds to voice commands (custom solution)",
+    "browser_action": {},
+    "commands": {
+        "hotkey_left_pedal": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+8",
+                "mac": "Command+Shift+8"
+            },
+            "description": "Left Foot Pedal",
+            "global": true
+        },
+        "hotkey_1": {
+            "suggested_key": {
+                "windows": "Ctrl+Shift+9",
+                "mac": "Command+Shift+9"
+            },
+            "description": "Right Foot Pedal",
+            "global": true
+        }
+    }
+}
