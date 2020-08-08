@@ -9,7 +9,9 @@
         "persistent": true
     },
     "permissions": [
-        "tabs"
+        "activeTab",
+        "storage",
+        "unlimitedStorage"
     ],
     "content_scripts": [
         {
