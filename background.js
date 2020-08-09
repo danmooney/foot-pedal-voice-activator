@@ -1,7 +1,7 @@
 // var bkg = chrome.extension.getBackgroundPage();
 
 chrome.commands.onCommand.addListener(function (command) {
-    alert('querying');
+    console.log('LISTENING');
 
     const currentWindowQuery = {
         active: true,

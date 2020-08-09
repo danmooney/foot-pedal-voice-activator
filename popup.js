@@ -2,9 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let data = {
         spotifyClientId: '',
         spotifyClientSecret: '',
-        songIndex: [
-            'Over The Hills And Far Away|Led Zeppelin',
-            'Blackbird|The Beatles',
+        songIdentifiers: [
+            'song:Over The Hills And Far Away|Led Zeppelin',
+            'song:Blackbird|The Beatles',
         ],
         ['song:Over The Hills And Far Away|Led Zeppelin']: {
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function commit (key, value) {
         data[key] = value;
 
-        chrome.storage.sync.set({
+        chrome.storage.local.set({
             [key]: value
         });
     }
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, false);
 
     // fetch all data on initial load
-    chrome.storage.sync.get(null, syncData => {
+    chrome.storage.local.get(null, syncData => {
         data = syncData;
 
         console.log('Sync Data: ', syncData);

@@ -1,0 +1,10 @@
+#spotifyTracklist tr,
+#spotifyTracklist td
+{
+    border: 1px solid #000;
+}
+
+#spotifyTracklist td.removed {
+    opacity: .8;
+    background: #ececec;
+}
